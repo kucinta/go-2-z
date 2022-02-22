@@ -19,6 +19,15 @@ func main() {
     println("Hello World")
 }
 ```
+# install in $GOPATH/bin
+```console
+$ go install go-2-z/hello
+# or
+go install .
+# or
+go install
+$ ~/go/bin/hello
+```
 # build
 ```console
 $ go build -o hello 
