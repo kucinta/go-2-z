@@ -1,4 +1,4 @@
-# Go Workspace Setup
+# Go VSCode Workspace Setup
 Inside settings.json, add...
 ```code
 {
@@ -7,7 +7,18 @@ Inside settings.json, add...
   ...
 }
 ```
-# Initial Projct Setup
+# $GOPATH Setup
+```
+$ nano ~/.bashrc
+# --- add ---
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+# --- end ---
+$ source .bashrc
+$ echo $GOPATH
+$ echo $PATH
+```
+# Initial Project Setup
 ```console
 $ mkdir ~/go-2-z
 $ cd ~/go-2-z
