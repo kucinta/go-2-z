@@ -1,4 +1,4 @@
-# Workspace Setup
+# Go Workspace Setup
 Inside settings.json, add...
 ```code
 "gopls": { "experimentalWorkspaceModule": true, }
