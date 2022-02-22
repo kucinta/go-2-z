@@ -7,13 +7,13 @@ Inside settings.json, add...
   ...
 }
 ```
-# setup
+# Initial Projct Setup
 ```console
 $ mkdir ~/go-2-z
 $ cd ~/go-2-z
 $ go mod init go-2-z/hello
 ```
-# create go source file
+# Create Go source file
 ```console
 $ nano hello.go
 ```
@@ -23,7 +23,7 @@ func main() {
     println("Hello World")
 }
 ```
-# install in $GOPATH/bin
+# Compile source and install binary in $GOPATH/bin
 ```console
 $ go install go-2-z/hello
 # or
@@ -32,15 +32,17 @@ go install .
 go install
 $ ~/go/bin/hello
 ```
-# build
+# Build test binary 
 ```console
 $ go build
 ```
-# execute
+# Execute and delete test binary
 ```console
 $ ./hello
+# Hello World
+$ rm hello
 ```
-# run interactively
+# Run source without generating executable
 ```console
 $ go run hello.go
 ```
