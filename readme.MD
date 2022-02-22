@@ -23,13 +23,13 @@ func main() {
     println("Hello World")
 }
 ```
-# Compile source and install binary in $GOPATH/bin
+# Compile source, install and execute binary in $GOPATH/bin
 ```console
 $ go install go-2-z/hello
 # or
-go install .
+$ go install .
 # or
-go install
+$ go install
 $ ~/go/bin/hello
 ```
 # Build test and execute binary
