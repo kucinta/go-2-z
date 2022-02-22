@@ -32,12 +32,12 @@ go install .
 go install
 $ ~/go/bin/hello
 ```
-# Build test binary 
+# Build test and execute binary
 ```console
 $ go build
-```
-# Execute and delete test binary
-```console
+$ ls hello* -la
+# -rwxr-xr-x 1 user user 1766414 Feb 22 14:56 hello
+# -rw-r--r-- 1 user user      75 Feb 22 09:00 hello.go
 $ ./hello
 # Hello World
 $ rm hello
