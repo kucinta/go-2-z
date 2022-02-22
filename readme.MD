@@ -1,7 +1,10 @@
 # Go Workspace Setup
 Inside settings.json, add...
 ```code
-"gopls": { "experimentalWorkspaceModule": true, }
+{
+  "gopls": { "experimentalWorkspaceModule": true, },
+...
+}
 ```
 # setup
 ```console
