@@ -30,6 +30,9 @@ $ go install go-2-z/hello
 $ go install .
 # or
 $ go install
+
+$ $GOPATH/bin/hello
+# or
 $ ~/go/bin/hello
 ```
 # Build test and execute binary
