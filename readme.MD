@@ -30,13 +30,13 @@ $ ~/go/bin/hello
 ```
 # build
 ```console
-$ go build -o hello 
+$ go build
 ```
 # execute
 ```console
-$ bin/app
+$ ./hello
 ```
 # run interactively
 ```console
-$ go run cmd/app/main.go
+$ go run hello.go
 ```
