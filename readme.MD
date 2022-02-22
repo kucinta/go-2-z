@@ -5,14 +5,13 @@ Inside settings.json, add...
 ```
 # setup
 ```console
-$ mkdir ~/go-pco3
-$ cd ~/go-pco3
-$ mkdir -p cmd/app pkg bin
-$ go mod init github.com/eldus/go-pmo3
+$ mkdir ~/go-2-z
+$ cd ~/go-2-z
+$ go mod init go-2-z/hello
 ```
 # create go source file
 ```console
-$ nano cmd/app/main.go
+$ nano hello.go
 ```
 ```go
 package main
@@ -22,7 +21,7 @@ func main() {
 ```
 # build
 ```console
-$ go build -o bin/app ./cmd/app
+$ go build -o hello 
 ```
 # execute
 ```console
