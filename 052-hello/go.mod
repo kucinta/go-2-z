@@ -1,4 +1,4 @@
-module go-2-z/052-hello
+module 052-hello/hello
 
 go 1.17
 
