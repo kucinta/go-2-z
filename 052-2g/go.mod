@@ -1,3 +1,3 @@
-module go-2go/052-2g
+module 052-2g/main
 
 go 1.17
