@@ -1,4 +1,4 @@
-module example/hello
+module go-2-z/052-hello
 
 go 1.17
 
