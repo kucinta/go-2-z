@@ -32,9 +32,8 @@ $ git status
 ```console
 $ git status
 $ git add .
-$ git commit -m "new test"
+$ git commit -m "up 244"
 $ git push
-$ git commit -a
 $ git status
 ```
 # Create Go source file
