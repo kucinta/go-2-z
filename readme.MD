@@ -26,17 +26,16 @@ $ go mod init go-2-z/hello
 $ git init
 $ git branch -a
 $ git add .
-$ git status -s
+$ git status
 ```
 # Update github
 ```console
-$ git status -s
-$ git commit -a
+$ git status
 $ git add .
 $ git commit -m "new test"
 $ git push
 $ git commit -a
-$ git status -s
+$ git status
 ```
 # Create Go source file
 ```console
