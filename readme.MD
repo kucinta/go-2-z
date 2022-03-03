@@ -32,7 +32,7 @@ $ git status
 ```console
 $ git status
 $ git add .
-$ git commit -m "up 244"
+$ git commit -m "up fm 244"
 $ git push
 $ git status
 ```
