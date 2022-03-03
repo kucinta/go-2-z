@@ -28,12 +28,18 @@ $ git branch -a
 $ git add .
 $ git status
 ```
-# Update github
+# Update (Upload) to Github
 ```console
 $ git status
 $ git add .
 $ git commit -m "up fm 244"
 $ git push
+$ git status
+```
+# Update (Download) from Github
+```console
+$ git status
+$ git pull
 $ git status
 ```
 # Create Go source file
