@@ -30,11 +30,13 @@ $ git status -s
 ```
 # Update github
 ```console
-$ git add .
+$ git status -s
 $ git commit -a
+$ git add .
 $ git commit -m "new test"
 $ git push
 $ git commit -a
+$ git status -s
 ```
 # Create Go source file
 ```console
