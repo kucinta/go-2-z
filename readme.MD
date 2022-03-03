@@ -23,6 +23,18 @@ $ echo $PATH
 $ mkdir ~/go-2-z
 $ cd ~/go-2-z
 $ go mod init go-2-z/hello
+$ git init
+$ git branch -a
+$ git add .
+$ git status -s
+```
+# Update github
+```console
+$ git add .
+$ git commit -a
+$ git commit -m "new test"
+$ git push
+$ git commit -a
 ```
 # Create Go source file
 ```console
