@@ -20,9 +20,8 @@ $ echo $PATH
 ```
 # Initial Project Setup
 ```console
-$ mkdir ~/go-2-z
-$ cd ~/go-2-z
-$ go mod init go-2-z/hello
+$ mkdir ~/go/go-2-z
+$ cd ~/go/go-2-z
 $ git init
 $ git branch -a
 $ git add .
@@ -55,25 +54,14 @@ $ git status
 ```
 # Create Go source file
 ```console
-$ nano hello.go
-```
+$ mkdir ~/go/go-2-z/051-test
+$ cd ~/go/go-2-z/05
+$ vim hello.go
 ```go
 package main
 func main() {
     println("Hello World")
 }
-```
-# Compile source, install and execute binary in $GOPATH/bin
-```console
-$ go install go-2-z/hello
-# or
-$ go install .
-# or
-$ go install
-
-$ $GOPATH/bin/hello
-# or
-$ ~/go/bin/hello
 ```
 # Build test and execute binary
 ```console
@@ -88,4 +76,16 @@ $ rm hello
 # Run source without generating executable
 ```console
 $ go run hello.go
+```
+# Compile source, install and execute binary in $GOPATH/bin
+```console
+$ go install hello.go
+# or
+$ go install .
+# or
+$ go install
+
+$ $GOPATH/bin/hello
+# or
+$ ~/go/bin/hello
 ```
