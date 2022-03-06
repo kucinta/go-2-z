@@ -28,7 +28,7 @@ $ git branch -a
 $ git add .
 $ git status
 ```
-# Setuo Github username + password
+# Set Github username + password
 ```console
 $ vim ~/.gitconfig
 [user]
