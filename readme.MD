@@ -28,6 +28,17 @@ $ git branch -a
 $ git add .
 $ git status
 ```
+# Setuo Github username + password
+```console
+$ vim ~/.gitconfig
+[user]
+	email = <id>@<email-host>
+	name = kucinta.com
+[credential]
+	helper = store
+$ vim ~/.git-credentials
+https://kucinta:<generated_token>@github.com
+```
 # Update (Upload) to Github
 ```console
 $ git status
