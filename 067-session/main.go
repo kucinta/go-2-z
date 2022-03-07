@@ -21,6 +21,7 @@ func main() {
 	http.HandleFunc("/logout", logout)
 	//http.HandleFunc("/bad", http.NotFound)
 	http.HandleFunc("/every-thing-else", http.NotFound)
+	fmt.Println("Server started on: http://192.168.1.234:8067")
 	http.ListenAndServe(":8067", nil)
 }
 
