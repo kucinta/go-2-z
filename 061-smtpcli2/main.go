@@ -9,7 +9,7 @@ import (
 	"net/smtp"
 )
 
-// SSL/TLS Email Example
+// TLS Email Example
 
 func main() {
 
@@ -40,14 +40,10 @@ func main() {
 	message += "Subject: This is the email subject 123\r\n"
 	message += body
 
-	// Connect to the SMTP Server
-	servername := "emx.pagenation.com:465" //465
-	//servername := "192.168.1.66:25"
+	// Connect to the SMTPS Server
+	servername := "emx.pagenation.com:465"
 
 	host, _, _ := net.SplitHostPort(servername)
-
-	println(servername)
-	println(host)
 
 	auth := smtp.PlainAuth("", "user", "123", host)
 
@@ -57,9 +53,6 @@ func main() {
 		ServerName:         host,
 	}
 
-	// Here is the key, you need to call tls.Dial instead of smtp.Dial
-	// for smtp servers running on 465 that require an ssl connection
-	// from the very beginning (no starttls)
 	conn, err := tls.Dial("tcp", servername, tlsconfig)
 	if err != nil {
 		log.Panic(err)
@@ -75,11 +68,12 @@ func main() {
 		log.Panic(err)
 	}
 
-	// To && From
+	// From
 	if err = c.Mail(from.Address); err != nil {
 		log.Panic(err)
 	}
 
+	// To
 	if err = c.Rcpt(to.Address); err != nil {
 		log.Panic(err)
 	}
