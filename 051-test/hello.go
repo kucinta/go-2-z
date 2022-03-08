@@ -1,11 +1,10 @@
 package main
-
-import (
-	"fmt"
-)
-
+import "fmt"
+/*
+$ go run hello.go
+OR
+$ go run .
+*/
 func main() {
-	fmt.Println("Hello, world.")
-	printHello()
-	displayTime()
+	fmt.Println("Hello, Go World.")
 }
