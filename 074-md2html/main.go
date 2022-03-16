@@ -1,19 +1,15 @@
 package main
 
 import (
-	"github.com/gomarkdown/markdown"
-	"github.com/gomarkdown/markdown/parser"
-	"github.com/gomarkdown/markdown/renderer"
+	"fmt"
+	"github.com/microcosm-cc/bluemonday"
+	"github.com/russross/blackfriday/v2"
 )
 
 func main() {
-	extensions := parser.CommonExtensions | parser.AutoHeadingIDs
-	p := parser.NewWithExtensions(extensions)
-
-	htmlFlags := html.CommonFlags | html.HrefTargetBlank
-	opts := html.RendererOptions{Flags: htmlFlags}
-	renderer := html.NewRenderer(opts)
-	http.ListenAndServe(":8080", nil)
-	md := []byte("markdown text")
-	html := markdown.ToHTML(md, p, renderer)
+	input := []byte("# 123\n123")
+	unsafe := blackfriday.Run(input)
+	myHTMLbyte := bluemonday.UGCPolicy().SanitizeBytes(unsafe)
+	myHTMLstring := string(myHTMLbyte)
+	fmt.Println(myHTMLstring)
 }
