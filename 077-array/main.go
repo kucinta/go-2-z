@@ -24,9 +24,6 @@ func main() {
 		{make: "Volvo", model: "V90", year: 1992},
 	}
 
-	for cars() {
-
-	}
 	getMake := func(c car) string {
 		return c.make
 	}
