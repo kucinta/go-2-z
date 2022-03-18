@@ -1,8 +1,62 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"encoding/json"
+)
 
 func main() {
+	//Test1()
+	//Test2()
+	Test3()
+}
+func Test3() {
+	userInfo2s := make([]map[string]interface{}, 10)
+	for i := 0; i < 10; i++ {
+		userInfo2s[i] = make(map[string]interface{}, 10)
+		userInfo2s[i]["id"] = 201902181425
+		userInfo2s[i]["name"] = "name..."
+		userInfo2s[i]["age"] = "Age..."
+	}
+	fmt.Println(userInfo2s)	
+}
+type MyStruct struct {
+    Id int64
+    Name string
+    Price float32
+}
+
+func Test2() {
+
+    dict := make(map[string]interface{})
+    dict["id"] = 201902181425       // int64
+    dict["name"] = "jackytse"       // string
+    dict["price"] = 123.456 + 100   // float32
+
+    jsonbody, err := json.Marshal(dict)
+	checkErr(err)
+	// jsonbody in bytes
+	fmt.Printf("%#v\n", jsonbody)
+	// convert bytes to string
+	fmt.Printf("%#v\n", string(jsonbody))
+
+
+    myStruct := MyStruct{}
+	
+	err = json.Unmarshal(jsonbody, &myStruct)
+	checkErr(err)
+
+    fmt.Printf("%#v\n", myStruct)
+}
+
+func checkErr(err error) {
+	if err != nil {
+		panic(err)
+	}
+}
+
+
+func Test1() {
 	// interface{} is an 'empty interface'
 	// can handle all kinds of variables
 	userInfo := make(map[string]interface{})
