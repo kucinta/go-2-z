@@ -9,7 +9,7 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 )
 
-type MyRecord struct {
+type MyStruct struct {
     ID   int64
     post_content string
 }
@@ -21,33 +21,31 @@ func main() {
 	checkErr(err)
 	rows, err := db1.Query("SELECT ID, post_content FROM dbedu_posts where post_content_filtered = '-' limit " + strconv.Itoa(myCntlimit))
 	checkErr(err)
-	dict := make([]map[string]interface{},myCntlimit)
+	thisCollection := make([]map[string]interface{},myCntlimit)
 	converter := md.NewConverter("", true, nil)
 	i := 0
 	for rows.Next() {
-	
-		dict[i] = make(map[string]interface{}, myCntlimit)
-        var myRecord MyRecord
+		thisCollection[i] = make(map[string]interface{}, myCntlimit)
+        var thisRow MyStruct
         // for each row, scan the result into our tag composite object
-        err = rows.Scan(&myRecord.ID, &myRecord.post_content)
+        err = rows.Scan(&thisRow.ID, &thisRow.post_content)
 		checkErr(err)
-		markdown, err := converter.ConvertString(myRecord.post_content)
+		markdown, err := converter.ConvertString(thisRow.post_content)
 		checkErr(err)
-		dict[i]["ID"] = myRecord.ID      // int64
-		dict[i]["post_markdown"] = markdown  // string
+		thisCollection[i]["ID"] = thisRow.ID      // int64
+		thisCollection[i]["post_markdown"] = markdown  // string
 		i++ 
 	}
 
 	for i := 0; i < myCntlimit; i++ {
 		stmt, err := db1.Prepare("update dbedu_posts set post_content_filtered=? where ID=?")
 		checkErr(err)
-		res, err := stmt.Exec(dict[i]["post_markdown"], dict[i]["ID"])
+		res, err := stmt.Exec(thisCollection[i]["post_markdown"], thisCollection[i]["ID"])
 		checkErr(err)
 		affect, err := res.RowsAffected()
 		checkErr(err)
 		fmt.Println(affect)
 	}
-
 }
 
 func checkErr(err error) {
