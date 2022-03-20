@@ -1,5 +1,5 @@
 # Go Versions
-V1.18 [![](https://go.dev/doc/go1.18)Release Notes]
+V1.18 [Release Notes](https://go.dev/doc/go1.18)
 ```code
 V1.18 - 2022.03
 V1.17 - 2021.08
