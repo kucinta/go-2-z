@@ -1,3 +1,12 @@
+# Go Version
+```code
+V1.18 - 2022.03
+V1.17 - 2021.08
+...
+V1.10 - 2018.02
+V1.1 - 2013.05
+V1 - 2012.03
+```
 # Go VSCode Workspace Setup
 Inside settings.json, add...
 ```code
