@@ -76,13 +76,22 @@ func main() {
 # Build test and execute binary
 ```console
 $ go build
-$ ls hello* -la
-# -rwxr-xr-x 1 user user 1766414 Feb 22 14:56 hello
-# -rw-r--r-- 1 user user      75 Feb 22 09:00 hello.go
+$ ls hello* -lah
+# -rwxr-xr-x  1 user user 1.7M Mar 21 09:52 hello
+# -rw-r--r--  1 user user  113 Mar  8 13:26 hello.go
 $ ./hello
 # Hello World
 $ rm hello
 ```
+# Build smaller binary
+By default Go build produce a binary file that contain debugging information and symbol tables. These can be removed to reduce the binary size.
+```console
+$ go build -ldflags "-w -s" hello.go
+$ ls hello* -lah
+# -rwxr-xr-x  1 user user 1.2M Mar 21 09:53 hello
+# -rw-r--r--  1 user user  113 Mar  8 13:26 hello.go
+```
+The file is about 30% smaller.
 # Run source without generating executable
 ```console
 $ go run hello.go
