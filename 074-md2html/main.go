@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+
 	"github.com/microcosm-cc/bluemonday"
 	"github.com/russross/blackfriday/v2"
 )
