@@ -1,6 +1,6 @@
 module 084-mssql
 
-go 1.17
+go 1.18
 
 require github.com/denisenkom/go-mssqldb v0.12.0
 
