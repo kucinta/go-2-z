@@ -48,8 +48,15 @@ $ vim ~/.gitconfig
 $ vim ~/.git-credentials
 https://kucinta:<generated_token>@github.com
 ```
+# Clone it
+```
+$ cd ~/go
+$ git clone https://github.com/kucinta/go-2-z.git
+```
 # Update (Upload) to Github
 ```console
+$ cd ~/go/go-2-z
+$ touch test123.txt
 $ git status
 $ git add .
 $ git commit -m "up fm 244"
