@@ -47,6 +47,9 @@ $ vim ~/.gitconfig
 	helper = store
 $ vim ~/.git-credentials
 https://kucinta:<generated_token>@github.com
+---
+How to generate the token?
+[User] Settings / Developer settings / Personal access tokens / [Generate]
 ```
 # Clone it
 ```
