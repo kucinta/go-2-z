@@ -13,8 +13,8 @@ import (
 
 func main() {
 
-	from := mail.Address{"", "user@emx.pagenation.com"}
-	to := mail.Address{"", "ptong@mac-net.com"}
+	from := mail.Address{"", "ptong@mac-net.com"}
+	to := mail.Address{"", "szeye@hotmail.com"}
 	subj := "This is the email subject"
 	body := "This is an example body.\nWith two lines.\nplus one :)"
 
@@ -35,8 +35,8 @@ func main() {
 	println(message)
 	println("--")
 	println(from.String())
-	message = "From: <user@emx.pagenation.com>\r\n"
-	message += "To: <ptong@mac-net.com>\r\n"
+	message = "From: <ptong@mac-net.com>\r\n"
+	message += "To: <szeye@hotmail.com>\r\n"
 	message += "Subject: This is the email subject 123\r\n"
 	message += body
 
