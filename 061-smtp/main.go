@@ -6,20 +6,28 @@ import (
 	"net/smtp"
 )
 
+/*
 const (
 	USERNAME = "user"
 	PASSWD   = "123"
 	HOST     = "emx.pagenation.com"
 )
+*/
+
+const (
+	USERNAME = "pete@kucinta.com"
+	PASSWD   = "We!@com3"
+	HOST     = "smtppro.zoho.com"
+)
 
 func main() {
-	from := "pete@eldus.com"
+	from := "pete@kucinta.com"
 	to := []string{
 		"editor@pagenation.com",
 		"ptong@mac-net.com",
 	}
 	msg := []byte(
-		"From: <pete@eldus.com>\r\n" +
+		"From: <pete@kucinta.com>\r\n" +
 			"To: <editor@pagenation.com>" +
 			",<ptong@mac-net.com>\r\n" +
 			"Subject: Golang testing mail 3\r\n" +
